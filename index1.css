@@ -18,7 +18,6 @@
 	margin: 0px;
 	border-style: groove;
 	font-size: 30px;
-	background-color: #bbb;
 	font-style: italic;
 }
 #text1{
@@ -105,35 +104,21 @@
 	border-style: groove;
 	float: left;
 }
-#chf{
-	width: 150px;
-	height: 150px;	
+#cs{
+	margin-left: 30px;
+	margin-top: 15px;
+	width: 100px;
+	height: 100px;	
 }
-#cp{
-	width: 60px;
-	height: 70px;
+#cs1{
+	margin-top: 2px;
+	width: 55px;
+	height: 60px;
+	margin-left: 3px;
 }
-#cx{
-	width: 60px;
-	height: 70px;
-}
-#dy{
-	width: 63px;
-	height: 70px;
-}
-#hcp{
-	width: 60px;
-	height: 70px;
-}
-#jd{
-	width: 60px;
-	height: 70px;
-}
-#lc{
-	width: 60px;
-	height: 70px;
-}
-#lx{
-	width: 64px;
-	height: 90px;
+#cs2{
+	margin-top: 2px;
+	width: 55px;
+	height: 80px;
+	margin-left: 7px;
 }
