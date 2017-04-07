@@ -58,7 +58,7 @@
 .low-box-left{
 	width: 220px;
 	height: 420px;
-	display: flex;
+
 }
 .low-box-right{
 	width: 540px;
@@ -73,7 +73,27 @@
 	margin-left: 20px;
 	margin-top: 20px;
 }
-.smallbox-left{
-	width: 
+.midbox-left{
+	width: 200px;
+	height: 60px;
+	margin-left: 20px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
 }
-
+.smallbox-left{
+	width: 50px;
+	height: 50px;
+	border-width: 1px;
+	border-style: solid;
+	background-color: grey;
+}
+.long-box{
+	width: 500px;
+	height: 40px;
+	margin-left: 20px;
+	margin-top:15px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: grey;
+}
