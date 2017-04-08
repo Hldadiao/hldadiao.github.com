@@ -170,3 +170,71 @@
 	justify-content: flex-end;
 	
 }
+#thirdbox{
+	width: 1000px;
+	height: 600px;
+	background-color: #f2f2f2;
+}
+.ui-grid-start{
+	width: 980px;
+	height: 280px;
+	margin-top: 7px;
+	margin-left: 7px;
+	display: flex;
+}
+.ui-grid-end{
+	width: 980px;
+	height: 280px;
+	margin-top: 15px;
+	margin-left: 7px;
+	display: flex;
+}
+.ui-box-all{
+	width: 310px;
+	height: 270px;
+	margin: 10px;
+}
+.ui-box-pic{
+	width: 305px;
+	height: 200px;
+}
+#pic{
+	width: 300px;
+	height: 200px;
+}
+.ui-box-mes{
+	width: 310px;
+	height: 70px;
+	background-color:white;
+}
+.ui-box-words{
+	width: 310px;
+	height: 20px;
+}
+.ui-box-line{
+	width: 310px;
+	height: 20px;
+}
+.ui-box-price{
+	width: 310px;
+	height: 20px;
+
+	display: flex;
+}
+.ui-box-now{
+	width: 120px;
+	height: 20px;
+
+}
+.ui-box-used{
+	width: 100px;
+	height: 20px;
+    margin-top: 10px;
+	text-decoration: line-through;
+}
+.ui-box-last{
+	width: 90px;
+	height: 20px;
+	margin-top: 10px;
+
+}
