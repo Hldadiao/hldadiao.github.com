@@ -1,0 +1,72 @@
+#bk{
+	width: 1500px;
+	height: 800px;
+
+}
+#total{
+	width: 1200px;
+	height: 1000px;
+}
+.a1{
+	left: 20px;
+	top: 5px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #11b006;
+	font-size: 20px;
+}
+.a2{
+	left: 20px;
+	top: 85px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #11b006;
+	font-size: 20px;
+}
+.a3{
+	left: 20px;
+	top: 165px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #11b006;
+	font-size: 20px;
+}
+.a4{
+	left: 20px;
+	top: 245px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #11b006;
+	font-size: 20px;
+}
+.a5{
+	left: 20px;
+	top: 325px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #11b006;
+	font-size: 20px;
+}
+.a6{
+	left: 20px;
+	top: 405px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #11b006;
+	font-size: 20px;
+}
+.a7{
+	left: 20px;
+	top: 485px;
+	width: 1000px;
+	height: 30px;
+	position: absolute;
+	color: #ff201e;
+	font-size: 30px;
+}
