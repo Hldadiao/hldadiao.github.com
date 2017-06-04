@@ -1,3 +1,12 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #ECF0EC url(wrapper-bg.jpg) repeat;
+	text-align: justify;
+	font-family: 'Arvo', serif;
+	font-size: 14px;
+	color: #303030;
+}
 p {
 	font-size: 14px;
 	line-height: 22.4px;
@@ -110,7 +119,7 @@ ul li {
 	font-family: sans-serif;
 }
 #header.fixed {
-	background-color: #fff;
+	background-image: url(wrapper-bg.jpg);
 }
 #header.fixed .header-content {
 	border-bottom: 0;
