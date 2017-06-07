@@ -54,6 +54,7 @@
 		     <p class="fragment">1.图片文字信息收集</p>
 			 <p class="fragment">2.给滚动的view添加头部，解决竖直方向的时间冲突。</p>
 			 <p class="fragment">3.移动的导航栏目。</p>
+			 <p class="fragment">4.地图导航资源栏目。</p>
 		</section>
 	</section>
 				<section data-background="images/background.jpg">
@@ -62,14 +63,167 @@
 				</section>
 				<section>
 					<p class="fragment">1.图片文字信息收集</p>
-					<p1 class="fragment">1</p1><br>
-					<p2 class="fragment">2</p1><br>
-					<p3 class="fragment">3</p1>
+					<p1 class="fragment">1.http://www.sohu.com/a/17991713_187294（中国特产百科文章）</p1><br>
+					<p2 class="fragment">2.https://wenku.baidu.com/view/58fe5d28c8d376eeafaa31a5.html（百度文库）</p2><br>
 				</section>
-					
+			    <section>
+			    	<p class="fragment">2.给滚动的view添加头部，解决竖直方向的时间冲突。</p>
+			    </section>
+			    <section>
+			    	<p>js函数如下：</p>
+			    	<pre>
+			    		<code data-trim>
+			    		$(document).ready(function() {
+	                        $(window).on('scroll', function() {
+		                         var scroll = $(window).scrollTop();
+		                           if (scroll >= 50) {
+			                         $('#header').addClass('fixed');
+		                                } 
+		                                else 
+		                                {
+			                                $('#header').removeClass('fixed');
+		                                }
+	                        });
+			    		</code>
+			    	</pre>
+			    </section>
+			    <section>
+			    	<pre>
+			    		<code data-trim>
+			    		var sections = $('section')
+		                  nav = $('nav[role="navigation"]');
+	$(window).on('scroll', function () {
+	  	var cur_pos = $(this).scrollTop();
+	  	sections.each(function() {
+	    	var top = $(this).offset().top - 276
+	        	bottom = top + $(this).outerHeight();
+	    	if (cur_pos >= top && cur_pos <= bottom) {
+	      		nav.find('a').removeClass('active');
+	      		nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+	    	}
+	  	});
+	});
+	nav.find('a').on('click', function () {
+	  	var $el = $(this)
+	    	id = $el.attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - 75
+		}, 500);
+	  return false;
+	});
+			    			
+			    		</code>
+			    	</pre>
+			    </section>
+			    <section>
+			    	<p class="fragment">3.移动的导航栏目。</p>
+			    </section>
+			    <section>
+			    	<p>js函数如下：</p>
 
+			    	<pre>
+			    		<code data-trim>
+			    		$('.nav-toggle').on('click', function() {
+		                   $(this).toggleClass('close-nav');
+		                     nav.toggleClass('open');
+		                       return false;
+	                              });	
+	                           nav.find('a').on('click', function() {
+		                          $('.nav-toggle').toggleClass('close-nav');
+		                            nav.toggleClass('open');
+	                                        });
+                                          });
+			    			
+			    		</code>
+			    	</pre>
+			    	
+			    </section>
+			    <section>
+			    	<p>css布局设计如下：</p>
+			    	<pre>
+			    		<code data-trim>
+			    		#header {
+	position: fixed;
+	width: 94%;
+	z-index: 999;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+#header .header-content {
+	margin: 0 auto;
+	padding: 40px 0;
+	width: 100%;
+	-moz-transition: padding 0.3s;
+	-o-transition: padding 0.3s;
+	-webkit-transition: padding 0.3s;
+	transition: padding 0.3s;
+}
+#header .logo {
+	font-size: 35px;
+	color: #000;
+	font-weight: 700;
+	float: left;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+#header.fixed {
+	background-image: url(wrapper-bg.jpg);
+}
+#header.fixed .header-content {
+	border-bottom: 0;
+	padding: 25px 0;
+}
+#header.fixed .nav-toggle {
+	top: 18px;
+}
+			    		</code>
+			    	</pre>
+			    	
+			    </section>
+			    <section>
+			    	 <p class="fragment">4.地图导航资源栏目。</p>
+			    	 <p1 class="fragment">资源来自百度地图，利用课堂内容改写</p1>
+			    </section>
+			    <section>
+			    	<p>js函数如下：</p>
+			    </section>
+			    <section>
+			    	<pre>
+			    		<code data-trim>
+			    		 var opts = {
+  width: 300, // 信息窗口宽度    
+  height: 200, // 信息窗口高度     
+}
+var map = new BMap.Map("myMap"); 
+var point = new BMap.Point(120.15, 30.25);
+map.centerAndZoom(point, 13);
+
+map.centerAndZoom(new BMap.Point(120.15, 30.25), 11);    
+map.addControl(new BMap.NavigationControl());   
+map.addControl(new BMap.ScaleControl());    
+map.addControl(new BMap.OverviewMapControl());    
+map.addControl(new BMap.MapTypeControl());    
+map.setCurrentCity("杭州"); 
+
+
+
+$(".button2").click(function(){
+  $("#lable").show();
+  map.clearOverlays();
+  var transit = new BMap.TransitRoute(map, {
+  renderOptions: {
+    map: map,
+    panel: "lable"
+  }
+});
+transit.search("杭州市海曙路58号", "饭店");     
+});
+			    			
+			    		</code>
+			    	</pre>
+			    </section>
 				</section>
-				<section data-background="images/background.jpg">Slide 4</section>
+				<section data-background="images/background.jpg">Thank you!</section>
 			</div>
 		</div>
 
