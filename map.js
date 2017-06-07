@@ -39,7 +39,7 @@ $(".button2").click(function(){
     panel: "lable"
   }
 });
-transit.search("杭州市海曙路58号", "宾馆");     
+transit.search("杭州市海曙路58号", "饭店");     
 });
 
 

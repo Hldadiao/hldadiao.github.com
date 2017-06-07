@@ -1,0 +1,29 @@
+#topbox{
+	width: 500px;
+	height: 50px;
+	margin: 5px;
+	display: flex;
+}
+.button1{
+	width: 100px;
+	height: 40px;
+	margin-top: 25px;
+	margin-left: 205px;
+}
+.button1:hover{
+	background-color: green;
+}
+#container{
+	margin-top: 50px;
+	display:flex;
+}
+#myMap{
+	width: 1500px;
+	height: 800px;
+}
+body{
+	background: #ECF0EC url(wrapper-bg.jpg) repeat;
+}
+a{
+	font-size: 30px;
+}
